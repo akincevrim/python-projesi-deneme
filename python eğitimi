@@ -1,0 +1,1760 @@
+while True:
+    print("phyton")
+    say = 0
+while say<6 :
+    say += 1
+    print(say)
+print("işlem bitti")
+liste = ("ahmet","ayşe","fatma","ali")
+say = 0
+while say<len(liste):
+    print(liste[say])
+    say += 1
+    anahtar = 1
+while anahtar == 1:
+    giris = input("işlem numarası giriniz")
+    if giris == 5:
+        anahtar = 0
+        print("işlem bitti")
+        #mport os
+#print(os.getcwd())
+#print(os.sep)
+import sys
+#sys.path.append("C:\paket")
+#print(*sys.path,sep="\n")
+#print(sys.getwindowsversion())
+#print(sys.version_info.major,sys.version_info.minor,sys.version_info.micro)
+#if sys.version_info.major == 3 and sys.version_info.minor > 3:
+#    print("iş görür")
+#print(sys.platform)
+#print(sys.getdefaultencoding())
+#print(sys.getrecursionlimit())
+#print(sys.setrecursionlimit())
+var1 = 'www.uzaktaneğitim.com'
+var2 = "vektörel.eğitim.com.tr"
+var3 = """uzaktan eğitimin adresi"""
+print(var1)
+print(var2)
+print(var3)
+var1 = 'www.uzaktaneğitim.com'
+var1.index("w")
+metin = "merhaba hoşgeldiniz adı: {adi} soyadı: {soyadı} telefon: {tel} "
+var ="vektorel"
+var1 = "bilişim"
+var2 = "123456"
+#metin.format(adi=var,soyadı=var1,tel=var2)
+metin = f"merhaba hoşgeldiniz adı: {var} soyadı: {var1} telefon: {var2} "
+metin
+var1 = 'www.uzaktaneğitim.com'
+liste =var1.split('.')
+liste
+C
+var1.strip('_')
+var1.lstrip("_")
+var1.rstrip("_")
+
+var1 = "_____________uzaktaneğitim___________"
+var1.strip('_')
+var1 ="teşekkürler süpermen"
+var1 = var1.replace("e","ı").replace("ü","ı")
+var1
+var1 = "şermin"
+var1.capitalize()
+var1 = "python programlama dili"
+var1.index('p')
+var1 = "pyhton programlama dili"
+var1.rindex("p")
+var1 = "UZAKTAN EĞİTİM"
+var1.lower()
+var1 = "uzaktan eğitim"
+var1.upper()
+"uzaktaneğitim.com".isalpha()
+"uzaktaneğitimcom".isalpha()
+"578".isdigit()
+"578".isnumeric()
+"578".isalpha()
+"www.uzaktaneğitim.com".startswith("www")
+"www.uzaktaneğitim.com".endswith("com")
+var1 = "yaşamak"
+var1[6]
+var1 = "yaşamak"
+var1[0:3]
+var1 = "yaşamak"
+var1[0:]
+var1 = "yaşamak"
+var1[:4]
+var1 ="yaşamak"
+var1[::2]
+var1 ="yaşamak"
+var1[::-1]
+var1 ="yaşamak"
+var1[6:2:-1]
+var1 ="yaşamak"
+var1[1::2]
+var1 ="yaşamak"
+var1.count("a")
+var1 = "ANKARADA;veli;123456/n134565"
+print(var1)
+ar1 = ' \t\t ankara\'da'
+print(var1)
+var1 = ' \t\t ankara\'da'
+print(var1.strip())
+var1 = 'c:\nnewfolder'
+print(var1)
+küme ={1,2,3,"a","b",4}
+print(type(küme))
+küme = {}
+print(type(küme))
+küme ={1,2,3,"a","b",4}
+küme[1]
+küme ={1,2,3,"a","b",4}
+küme.add(5)
+küme
+küme.clear()
+küme
+küme ={1,2,3,"a","b",4}
+küme2 = küme.copy()
+küme2
+küme3 = {6,5,4}
+küme.update(küme3)
+küme
+küme.remove(9)
+küme
+küme.discard(4)
+küme
+küme.pop()
+küme
+A = {"a",1,9,"b"}
+B = {"b",2,8,"c"}
+C = {"c",3,7,"d"}
+A.union(B).union(C)
+A = {"a",1,9,"b"}
+B = {"b",2,8,"c",1}
+C = {"c",3,7,"d",1}
+A.union(B.union(C))
+A.intersection(B)
+A.intersection(B.intersection(C))
+D = A.copy()
+D
+D.intersection_update(B)
+E = {0,5}
+E.isdisjoint(A)
+A
+print("A",A)
+print("B",B)
+print("fark",B.difference(A))
+F = B.copy()
+F
+F.difference_update(A)
+F
+F.issubset(B)
+F.issubset(A)
+B.issuperset(F)
+frozenF = frozenset(F)
+print(type(frozenF))
+frozenF.update("a")
+print(dir(frozenF))
+def fonk(metin):
+    if len(metin)== 1:
+        print(metin)
+    else:
+        print(metin)
+        fonk(metin[1:])
+fonk("python")
+def faktöriyel(sayı):
+    sonuc = 1
+    for i in range(1,sayı+1):
+        sonuc *= i
+    return sonuc
+faktöriyel(3)
+def faktöriyelözyineleme(sayı):
+    if sayı == 1:
+        return sayı
+    else:
+        return sayı * faktöriyelözyineleme (sayı-1)
+faktöriyelözyineleme(66)
+def toplama(sayı,mevcut):
+    print(f"sayı:{sayı},mevcut:{mevcut},sayı+mevcut:{sayı+mevcut}")
+    if sayı == 9:
+        return mevcut
+    else:
+        print("fonksiyon tekrarı")
+        return toplama (sayı+1,mevcut+sayı)
+toplama(1,0)
+def toplama(sayı,mevcut,limit):
+    print(f"sayı:{sayı},mevcut:{mevcut},sayı+mevcut:{sayı+mevcut}")
+    if sayı == limit:
+        return mevcut
+    else:
+        print("fonksiyon tekrarı")
+        return toplama (sayı+1,mevcut+sayı,limit)
+toplama(1,0,11)
+a = 5.4
+b = 2
+print(type(a))
+print(type(b))
+print(type(a+b))
+a = 14.4 + 2j
+b = 2
+c = 3.4
+print(type(a))
+print(type(b))
+print(type(c))
+a+b+c
+demet = (1,)
+demet = demet + ("1",)
+demet
+demet = (1,2,3)
+demet[1:2]
+demet = ("1","ali","ali","veli")
+demet.index("ali")
+demet.count("ali")
+a = 1
+b = 2
+print(a+b)
+print(a-b)
+print(a/b)
+print(a*b)
+print(a//b)
+print(a%b)
+print(a**b)
+a = 5
+b = 2
+print(a+b)
+print(a-b)
+print(a/b)
+print(a*b)
+print(a//b)
+print(a%b)
+print(a**b)
+a = 10
+b = 100
+print(a+b)
+print(a-b)
+print(a/b)
+print(a*b)
+print(a//b)
+print(a%b)
+print(a**b)
+a = 10
+b = 100
+a>b
+b<a
+b == a
+a != b
+a = 4 
+a+1
+a = 4 
+a+1
+a+=1
+print(a)
+a-=1
+print(a)
+a/=1
+print(a)
+a*=1
+print(a)
+a**=1
+print(a)
+a%=1
+print(a)
+a//=1
+print(a)
+a = 8  # 1000
+b = 2  # 0010
+a&b
+a<<2
+a>>2
+print(~a)
+a = True 
+b = False 
+print(a and b)
+print(a or b)
+print(not a)
+a = 2
+b = 2.0
+print(a==b)
+print(a is b)
+print(a is not b)
+liste = [1,2,3,4]
+a = 2
+print(a in liste)
+print(a not in liste)
+def topla(x,y):
+    return x+y
+topla(2,3)
+fonk = lambda x : x*x
+fonk(2)
+fonk = lambda x,y : x+y
+fonk(2,3)
+fonk = lambda x,y,z:x+y+z
+fonk(1,2,3)
+5
+sonuc = (lambda x,y,z=3:x+y+z)(1,2)
+sonuc
+6
+toplam = lambda *args:sum(args)
+toplam(1,2,3,4,5,6)
+21
+toplam = lambda **kwargs:sum(kwargs.values())
+toplam (a=1,b=2,c=3)
+6
+
+
+def fonk (a,b):
+    c= 3
+    return (lambda a,b,c:a+b+c)(a,b,c)
+fonk(1,2)
+6
+def fonk (a,b):
+    c= 3
+    return a + b + c
+fonklamb = lambda a,b:fonk(a,b)
+fonklamb(1,2)
+6
+sözlük = {"1":"bir","2":"iki"}
+print("anahtarlar",sözlük.keys())
+print("değerler",sözlük.values())
+print("eleman",sözlük.items())
+for key,value in sözlük.items():
+    print(value,key)
+anahtarlar dict_keys(['1', '2'])
+değerler dict_values(['bir', 'iki'])
+eleman dict_items([('1', 'bir'), ('2', 'iki')])
+bir 1
+iki 2
+def fonk(**kwargs):
+    print(type(kwargs))
+fonk()
+<class 'dict'>
+def fonk(**kwargs):
+    for key,value in kwargs.items():
+        if key == "yazdır":
+            print(value)
+        if key == "geridön":
+            return value
+fonk(yazdır="kwargs",geridön = "geri dönen kwargs")
+kwargs
+'geri dönen kwargs'
+def fonk(**kwargs):
+    for key,value in kwargs.items():
+        if key == "yazdır":
+            print(value)
+fonk(yazdır="kwargs")
+liste = ["isim","soysim","telefon"]
+sözlük = dict.fromkeys(liste,"")
+kayıtliste = [i for i in range(6)]
+kayıt = dict.fromkeys(kayıtliste,sözlük)
+kayıt
+{0: {'isim': '', 'soysim': '', 'telefon': ''},
+ 1: {'isim': '', 'soysim': '', 'telefon': ''},
+ 2: {'isim': '', 'soysim': '', 'telefon': ''},
+ 3: {'isim': '', 'soysim': '', 'telefon': ''},
+ 4: {'isim': '', 'soysim': '', 'telefon': ''},
+ 5: {'isim': '', 'soysim': '', 'telefon': ''}}
+ yaş = int(input())
+print(f"demek {yaş} yaşındasın")
+
+isim = input("isminizi giriniz: ")
+print("hoşgeldin " + isim)
+# from tkinter import *
+ 
+from tkinter import messagebox
+ 
+pencere = Tk()
+ 
+pencere.title("www.yazilimkodlama.com")
+pencere.geometry("400x300")
+ 
+#grid form çizdirme
+uygulama = Frame(pencere)
+uygulama.grid()
+ 
+ 
+Lb1 = Listbox(uygulama)
+Lb1.insert(1, "Python")
+Lb1.insert(2, "C#")
+Lb1.insert(3, "JAVA")
+Lb1.insert(4, "JAVASCRIPT")
+Lb1.grid(padx=110, pady=10)
+ 
+#formu çiz
+pencere.mainloop()
+a = 2
+if a == 2:
+    print("a 2'dir")
+print("işlem bitti")
+
+metin = ""
+sayı = 0
+liste = []
+demet = ()
+süzlük = {}
+if metin:
+    print("dolu")
+metin = "1"
+sayı = 0
+liste = []
+demet = ()
+süzlük = {}
+if metin:
+    print("dolu")
+a = 2
+if a == 3:
+    print("a 2'dir")
+print("işlem bitti")
+işlem bitti
+a = 4
+if a != 3:
+    print("a 3 değildir") 
+a 3 değildir
+a = 4
+b = 3
+if a != b:
+    print("a b den farklıdır") 
+a b den farklıdır
+a = 4
+b = 3
+if a >= 4 :
+    print("a 4 e eşit yada 4 ten byüktür") 
+print("işlem bitti")
+a 4 e eşit yada 4 ten byüktür
+işlem bitti
+a = 4
+b = 3
+if a == b :
+    print("a b ye eşittir") 
+else:
+    print("a b den farklıdır")
+print("işlem bitti")
+a b den farklıdır
+işlem bitti
+a = 4
+b = 4
+if a == b :
+    print("a b ye eşittir") 
+else:
+    print("a b den farklıdır")
+print("işlem bitti")
+a b ye eşittir
+işlem bitti
+a = 3
+b = 2
+if a == b :
+    print("a b ye eşittir") 
+else:
+    if a < 3 :
+        print("a 3 den küçüktür")
+    else:
+        if a<4:
+            print("a 4 tür")
+    print("a b den farklıdır")
+print("işlem bitti")
+a 4 tür
+a b den farklıdır
+işlem bitti
+a = 3
+b = 2
+if a == b :
+    print("a b ye eşittir") 
+elif a < 3 :
+    print("a 3 den küçüktür")
+elif a<4:
+    print("a 4 tür")
+    print("a b den farklıdır")
+print("işlem bitti")
+a 4 tür
+a b den farklıdır
+işlem bitti
+Not=(int(input("notunuzu giriniz")))
+"""
+0-45 EE
+45-55 DD
+55-65 CC
+65-75 BB
+65-100 AA
+"""
+if Not<=44:
+    print("notunuz:","EE")
+elif Not<=54:
+    print("notunuz:","DD")
+elif Not<=64:
+    print("notunuz:","CC")
+elif Not<=74:
+    print("notunuz:","BB")
+elif Not<=100:
+    print("notunuz:","AA")
+else:
+    print("geçersiz Not")
+notunuzu giriniz100000000000000000
+geçersiz Not
+liste = [1,2,3,5,7,11,13]
+sayi = int(input("sayıyı giriniz"))
+if sayi in liste:
+    print("sayı liste içinde var")
+else:
+    liste.append(sayi)
+    print("ekledim")
+print(liste)
+sayıyı giriniz100000
+ekledim
+[1, 2, 3, 5, 7, 11, 13, 100000]
+metin = "phyton öğreniyorum"
+if "p" in metin:
+    print("metinin içerisinde p harfi var")
+metinin içerisinde p harfi var
+sözlük = {"book":"kitap","pencil":"kalem"}
+if "book" in sözlük.keys():
+    print("sözlükte var")
+sözlükte var
+sözlük = {"book":"kitap","pencil":"kalem"}
+if "kitap" in sözlük.values():
+    print("sözlükte var")
+sözlükte var
+a = int("3")
+b = 3
+if a is b:
+    print("a b dir")
+a b dir
+a = b = 3
+if a is b:
+    print("a b dir")
+a b dir
+a = float("3")
+b = 3
+if a == b:
+    print("a b dir")
+a b dir
+sayi = int(input("sayıyı giriniz"))
+if sayi > 0 and sayi % 2 == 0 :
+    print("sayı çift pozitif sayıdır")
+sayıyı giriniz8
+sayı çift pozitif sayıdır
+sayi = int(input("sayıyı giriniz"))
+if sayi > 0 or sayi % 2 == 0 :
+    print("koşul çalışır")
+sayıyı giriniz2
+koşul çalışır
+kullanıcı = input("kullanıcı adınızı giriniz")
+sifre = input("şifrenizi giriniz")
+if not sifre :
+    print("lütfen şifre giriniz")
+else :
+    if sifre == "1234":
+        print("merhaba {}".format(kullanıcı))
+kullanıcı adınızı giriniza
+şifrenizi giriniz1234
+merhaba a
+sayi = 25
+tahmin = int(input("sayıyı giriniz"))
+if sayi == tahmin :
+    print("tebrikler")
+elif sayi < tahmin :
+    print("aşağı")
+elif sayi > tahmin :
+    print("yukarı")
+else:
+    print("üzgünüm kaybettin")
+sayıyı giriniz1
+yukarı
+a = 3 
+b = 2
+c = 1
+if (a<b or not a<c) and c == 1 or c*3==a:
+    print("doğru")
+doğru
+def fonk():
+    a = 5 #local değişken
+    print(a)
+fonk()
+
+def fonk ():
+    print(a)
+a = 5 #global değişken
+fonk()
+5
+a = 5
+def fonk():
+    a = 4
+    print(a)
+fonk()
+print(a)
+4
+5
+a = 5 
+def fonk():
+    global a
+    a = 3
+    print(a)
+fonk()
+print(a)
+3
+3
+a = 5 
+def fonk(a):
+    global a
+    a = a
+    print(a)
+fonk(8)
+print(a)
+  File "<ipython-input-11-4e9d4c24e458>", line 3
+    global a
+    ^
+SyntaxError: name 'a' is parameter and global
+
+
+a = 5 
+def fonk(b):
+    global a
+    a = b
+    print(a)
+fonk(8)
+print(a)
+8
+8
+def Fonk():
+    print("merhaba")
+Fonk()
+a
+def Fonk2():
+    sonuc = 2+5
+    return sonuc
+sayı = Fonk2()
+işlem = sayı + 7 
+def Fonk3():
+    sonuc=2+5
+    return sonuc,"sonuc"
+print(Fonk3()[1],Fonk3()[0])
+def Fonk5():
+    sonuc=2+5
+    return sonuc,"sonuc"
+sonuc 7
+def Fonk4():
+    liste = (1,2,3,"ali","ayşe")
+    for item in liste:
+        yield item
+for i in Fonk4():
+    print(i)
+1
+2
+3
+ali
+ayşe
+print(type(Fonk()))
+print(type(Fonk2()))
+print(type(Fonk3()))
+print(type(Fonk4()))
+<class 'NoneType'>
+<class 'int'>
+<class 'tuple'>
+<class 'generator'>
+metin = "PYTHON"
+#for kar in metin :
+ #   print(kar)
+print(metin,sep="/n")
+
+liste = ("ahmet","fatma","ayşe","ali")
+for item in liste :
+    print(item)
+ahmet
+fatma
+ayşe
+ali
+sözlük = {"1":"bir","2":"iki","3":"üç"}
+for key in sözlük.keys():
+    print(key)
+for value in sözlük.values():
+    print(value)
+1
+2
+3
+bir
+iki
+üç
+for i in range(6):
+    print(i)
+0
+1
+2
+3
+4
+5
+for i in range(0,50,5):
+    print(i)
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+for i in range(10,0,-1):
+    print(i)
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+for i in range(0,20):
+    if i % 2 == 0 :
+        print(i,"çift bir sayıdır")
+0 çift bir sayıdır
+2 çift bir sayıdır
+4 çift bir sayıdır
+6 çift bir sayıdır
+8 çift bir sayıdır
+10 çift bir sayıdır
+12 çift bir sayıdır
+14 çift bir sayıdır
+16 çift bir sayıdır
+18 çift bir sayıdır
+for i in range(0,21):
+    if i % 2 == 0 :
+        print(i,"çift bir sayıdır")
+    else :
+        print(i,"tek bir sayıdır")
+0 çift bir sayıdır
+1 tek bir sayıdır
+2 çift bir sayıdır
+3 tek bir sayıdır
+4 çift bir sayıdır
+5 tek bir sayıdır
+6 çift bir sayıdır
+7 tek bir sayıdır
+8 çift bir sayıdır
+9 tek bir sayıdır
+10 çift bir sayıdır
+11 tek bir sayıdır
+12 çift bir sayıdır
+13 tek bir sayıdır
+14 çift bir sayıdır
+15 tek bir sayıdır
+16 çift bir sayıdır
+17 tek bir sayıdır
+18 çift bir sayıdır
+19 tek bir sayıdır
+20 çift bir sayıdır
+sayı = int(input("sayıyı giriniz"))
+for i in range(0,sayı):
+    if i % 2 == 0 :
+        print(i,"çift bir sayıdır")
+    else :
+        print(i,"tek bir sayıdır")
+sayıyı giriniz40
+0 çift bir sayıdır
+1 tek bir sayıdır
+2 çift bir sayıdır
+3 tek bir sayıdır
+4 çift bir sayıdır
+5 tek bir sayıdır
+6 çift bir sayıdır
+7 tek bir sayıdır
+8 çift bir sayıdır
+9 tek bir sayıdır
+10 çift bir sayıdır
+11 tek bir sayıdır
+12 çift bir sayıdır
+13 tek bir sayıdır
+14 çift bir sayıdır
+15 tek bir sayıdır
+16 çift bir sayıdır
+17 tek bir sayıdır
+18 çift bir sayıdır
+19 tek bir sayıdır
+20 çift bir sayıdır
+21 tek bir sayıdır
+22 çift bir sayıdır
+23 tek bir sayıdır
+24 çift bir sayıdır
+25 tek bir sayıdır
+26 çift bir sayıdır
+27 tek bir sayıdır
+28 çift bir sayıdır
+29 tek bir sayıdır
+30 çift bir sayıdır
+31 tek bir sayıdır
+32 çift bir sayıdır
+33 tek bir sayıdır
+34 çift bir sayıdır
+35 tek bir sayıdır
+36 çift bir sayıdır
+37 tek bir sayıdır
+38 çift bir sayıdır
+39 tek bir sayıdır
+a = 1
+b = 1
+c = a+b
+print(c)
+a = b
+b = c
+c = a+b
+print(c)
+a = b
+b = c
+c = a+b
+print(c)
+a = b
+b = c
+c = a+b
+print(c)
+a = b
+b = c
+c = a+b
+print(c)
+a = b
+b = c
+c = a+b
+print(c)
+a = b
+b = c
+c = a+b
+print(c)
+a = 1
+b = 1
+for i in range(10,0):
+    c = a+b
+    print(c)
+a = b 
+b = a
+a = 1
+b = 1
+for i in range(10,0):
+    c = a+b
+    print(c)
+a,b = b,c
+a = b = 1
+sayı = int(input("sayıyı giriniz"))
+for i in range(0,sayı):
+    c = a+b
+    print(i,c/b,c)
+    a,b = b,c
+metin = "PYTHON"
+#for kar in metin :
+ #   print(kar)
+print(metin,sep="/n")
+
+liste = ("ahmet","fatma","ayşe","ali")
+for item in liste :
+    print(item)
+ahmet
+fatma
+ayşe
+ali
+sözlük = {"1":"bir","2":"iki","3":"üç"}
+for key in sözlük.keys():
+    print(key)
+for value in sözlük.values():
+    print(value)
+1
+2
+3
+bir
+iki
+üç
+for i in range(6):
+    print(i)
+0
+1
+2
+3
+4
+5
+for i in range(0,50,5):
+    print(i)
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+for i in range(10,0,-1):
+    print(i)
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+for i in range(0,20):
+    if i % 2 == 0 :
+        print(i,"çift bir sayıdır")
+0 çift bir sayıdır
+2 çift bir sayıdır
+4 çift bir sayıdır
+6 çift bir sayıdır
+8 çift bir sayıdır
+10 çift bir sayıdır
+12 çift bir sayıdır
+14 çift bir sayıdır
+16 çift bir sayıdır
+18 çift bir sayıdır
+for i in range(0,21):
+    if i % 2 == 0 :
+        print(i,"çift bir sayıdır")
+    else :
+        print(i,"tek bir sayıdır")
+0 çift bir sayıdır
+1 tek bir sayıdır
+2 çift bir sayıdır
+3 tek bir sayıdır
+4 çift bir sayıdır
+5 tek bir sayıdır
+6 çift bir sayıdır
+7 tek bir sayıdır
+8 çift bir sayıdır
+9 tek bir sayıdır
+10 çift bir sayıdır
+11 tek bir sayıdır
+12 çift bir sayıdır
+13 tek bir sayıdır
+14 çift bir sayıdır
+15 tek bir sayıdır
+16 çift bir sayıdır
+17 tek bir sayıdır
+18 çift bir sayıdır
+19 tek bir sayıdır
+20 çift bir sayıdır
+sayı = int(input("sayıyı giriniz"))
+for i in range(0,sayı):
+    if i % 2 == 0 :
+        print(i,"çift bir sayıdır")
+    else :
+        print(i,"tek bir sayıdır")
+sayıyı giriniz40
+0 çift bir sayıdır
+1 tek bir sayıdır
+2 çift bir sayıdır
+3 tek bir sayıdır
+4 çift bir sayıdır
+5 tek bir sayıdır
+6 çift bir sayıdır
+7 tek bir sayıdır
+8 çift bir sayıdır
+9 tek bir sayıdır
+10 çift bir sayıdır
+11 tek bir sayıdır
+12 çift bir sayıdır
+13 tek bir sayıdır
+14 çift bir sayıdır
+15 tek bir sayıdır
+16 çift bir sayıdır
+17 tek bir sayıdır
+18 çift bir sayıdır
+19 tek bir sayıdır
+20 çift bir sayıdır
+21 tek bir sayıdır
+22 çift bir sayıdır
+23 tek bir sayıdır
+24 çift bir sayıdır
+25 tek bir sayıdır
+26 çift bir sayıdır
+27 tek bir sayıdır
+28 çift bir sayıdır
+29 tek bir sayıdır
+30 çift bir sayıdır
+31 tek bir sayıdır
+32 çift bir sayıdır
+33 tek bir sayıdır
+34 çift bir sayıdır
+35 tek bir sayıdır
+36 çift bir sayıdır
+37 tek bir sayıdır
+38 çift bir sayıdır
+39 tek bir sayıdır
+a = 1
+b = 1
+c = a+b
+print(c)
+a = b
+b = c
+c = a+b
+print(c)
+a = b
+b = c
+c = a+b
+print(c)
+a = b
+b = c
+c = a+b
+print(c)
+a = b
+b = c
+c = a+b
+print(c)
+a = b
+b = c
+c = a+b
+print(c)
+a = b
+b = c
+c = a+b
+print(c)
+a = 1
+b = 1
+for i in range(10,0):
+    c = a+b
+    print(c)
+    a = b 
+    b = a
+a = 1
+b = 1
+sayı = int(input("sayıyı giriniz"))
+for i in range(0,sayı):
+    c = a+b
+    print(c)
+    a,b = b,c
+sayıyı giriniz5
+2
+3
+5
+8
+13
+a = b = 1
+sayı = int(input("sayıyı giriniz"))
+for i in range(0,sayı):
+    c = a+b
+    print(i,c/b,c)
+    a,b = b,c
+sayıyı giriniz20
+0 2.0 2
+1 1.5 3
+2 1.6666666666666667 5
+3 1.6 8
+4 1.625 13
+5 1.6153846153846154 21
+6 1.619047619047619 34
+7 1.6176470588235294 55
+8 1.6181818181818182 89
+9 1.6179775280898876 144
+10 1.6180555555555556 233
+11 1.6180257510729614 377
+12 1.6180371352785146 610
+13 1.618032786885246 987
+14 1.618034447821682 1597
+15 1.6180338134001253 2584
+16 1.618034055727554 4181
+17 1.6180339631667064 6765
+18 1.6180339985218033 10946
+19 1.618033985017358 17711
+sayı = int(input("sayıyı giriniz"))
+for i in range(2,sayı):
+    if sayı % i == 0 :
+        print("sayı asal değildir")
+sayıyı giriniz20
+sayı asal değildir
+sayı asal değildir
+sayı asal değildir
+sayı asal değildir
+sayı = int(input("sayıyı giriniz"))
+sonuc = 1
+for i in range(1,sayı+1):
+    sonuc = sonuc * i
+print(sonuc)
+sayıyı giriniz4
+24
+def Fonk():
+    print("bu benim ilk fonksiyonum")
+    def Fonk(param1):
+    print("merhaba",param1)
+Fonk("python")
+n
+def Fonk2(param1,param2):
+    sonuc = param1 + param2
+    return sonuc
+print(Fonk2(4,5))
+9
+def Fonk3(param1,param2):
+    sonuc = param1 - param2
+    return sonuc
+print(Fonk3(4,5))
+-1
+def Fonk3(param1=0,param2=0):
+    sonuc = param1 - param2
+    return sonuc
+print(Fonk3(param2=4))
+-4
+def Fonk3(param1=0,param2=0):
+    sonuc = param1 - param2
+    return sonuc
+print(Fonk3(param2=4,param1=3))
+-7
+n
+def Fonk2(param1,param2):
+    sonuc = param1 + param2
+    return sonuc
+print(Fonk2(4,5))
+9
+def Fonk3(param1,param2):
+    sonuc = param1 - param2
+    return sonuc
+print(Fonk3(4,5))
+-1
+def Fonk3(param1=0,param2=0):
+    sonuc = param1 - param2
+    return sonuc
+print(Fonk3(param2=4))
+-4
+def Fonk3(param1=0,param2=0):
+    sonuc = param1 - param2
+    return sonuc
+print(Fonk3(param2=4,param1=3))
+-7
+n
+def Fonk2(param1,param2):
+    sonuc = param1 + param2
+    return sonuc
+print(Fonk2(4,5))
+9
+def Fonk3(param1,param2):
+    sonuc = param1 - param2
+    return sonuc
+print(Fonk3(4,5))
+-1
+def Fonk3(param1=0,param2=0):
+    sonuc = param1 - param2
+    return sonuc
+print(Fonk3(param2=4))
+-4
+def Fonk3(param1=0,param2=0):
+    sonuc = param1 - param2
+    return sonuc
+print(Fonk3(param2=4,param1=3))
+-7
+n
+def Fonk2(param1,param2):
+    sonuc = param1 + param2
+    return sonuc
+print(Fonk2(4,5))
+9
+def Fonk3(param1,param2):
+    sonuc = param1 - param2
+    return sonuc
+print(Fonk3(4,5))
+-1
+def Fonk3(param1=0,param2=0):
+    sonuc = param1 - param2
+    return sonuc
+print(Fonk3(param2=4))
+-4
+def Fonk3(param1=0,param2=0):
+    sonuc = param1 - param2
+    return sonuc
+print(Fonk3(param2=4,param1=3))
+-7
+def fonksiyon(liste):
+    x = []
+    for item in liste:
+        if item not in x:
+            x.append(item)
+    return x
+liste = [2,3,4,5,6,7,8]
+fonksiyon(liste)
+[2, 3, 4, 5, 6, 7, 8]
+"9,652,412"
+"dokuz milyon altı yüz elli iki bin dört yüz on iki"
+metin = "9,652,412".replace(",","")
+metin
+while len(metin)%3>0:
+    metin = "0" + metin
+metin
+'009652412'
+"9,652,412"
+"dokuz milyon altı yüz elli iki bin dört yüz on iki"
+metin = "9,652,412".replace(",","")
+metin
+while len(metin)%3>0:
+    metin = "0" + metin
+liste = []
+for i in range(3):
+    liste.append(metin[i*3:i*3+3])
+liste
+['009', '652', '412']
+def Fonk():
+    print("bu benim ilk fonksiyonum")
+    def Fonk(param1):
+    print("merhaba",param1)
+Fonk("python")
+merhaba python
+def Fonk2(param1,param2):
+    sonuc = param1 + param2
+    return sonuc
+print(Fonk2(4,5))
+9
+def Fonk3(param1,param2):
+    sonuc = param1 - param2
+    return sonuc
+print(Fonk3(4,5))
+-1
+def Fonk3(param1=0,param2=0):
+    sonuc = param1 - param2
+    return sonuc
+print(Fonk3(param2=4))
+-4
+def Fonk3(param1=0,param2=0):
+    sonuc = param1 - param2
+    return sonuc
+print(Fonk3(param2=4,param1=3))
+-7
+sayı = int(input("sayı giriniz"))
+for i in range(2,sayı):
+    if sayı % i == 0:
+        print("sayı asal değildir")
+        break
+else :
+    print( sayı , " sayısı asaldır ")
+​
+sayı giriniz13
+13  sayısı asaldır 
+sayı = 25
+hak = 0
+while hak < 5 :
+    tahmin = int(input("tahmininizi giriniz:"))
+    hak += 1
+    if tahmin == sayı:
+        print("tebrikler")
+        break
+    elif tahmin < sayı:
+        print("daha yüksek tahmin yapınız kalan hak {}".format(hak))
+    elif tahmin > sayı:
+        print("daha küçük bir tahmin yapınız kalan hak {}".format(hak))
+else:
+    print("oyun bitti")
+tahmininizi giriniz:40
+daha küçük bir tahmin yapınız kalan hak 1
+tahmininizi giriniz:30
+daha küçük bir tahmin yapınız kalan hak 2
+tahmininizi giriniz:10
+daha yüksek tahmin yapınız kalan hak 3
+tahmininizi giriniz:25
+tebrikler
+import random
+sayı = random.randint(1,100)
+hak = 0
+while hak < 5 :
+    tahmin = int(input("tahmininizi giriniz:"))
+    hak += 1
+    if tahmin == sayı:
+        print("tebrikler")
+        break
+    elif tahmin < sayı:
+        print("daha yüksek tahmin yapınız kalan hak {}".format(hak))
+    elif tahmin > sayı:
+        print("daha küçük bir tahmin yapınız kalan hak {}".format(hak))
+else:
+    print("oyun bitti tuttuğum sayı : {}".format(sayı))
+tahmininizi giriniz:44
+daha küçük bir tahmin yapınız kalan hak 1
+tahmininizi giriniz:45
+daha küçük bir tahmin yapınız kalan hak 2
+tahmininizi giriniz:33
+daha küçük bir tahmin yapınız kalan hak 3
+tahmininizi giriniz:23
+daha küçük bir tahmin yapınız kalan hak 4
+tahmininizi giriniz:11
+daha yüksek tahmin yapınız kalan hak 5
+oyun bitti tuttuğum sayı : 17
+menu = """
+1-toplama 
+2-çıkarma
+3-çarpma
+4-bölme
+5-faktöriyel
+6-kuvvet
+7-kök alma
+8-çıkış
+"""
+anahtar = 1
+while anahtar == 1:
+    işlem = int(input(menu))
+    if işlem !=8:
+        sayı1 = int(input("1.sayıyı giriniz"))
+        sayı2 = int(input("2.sayıyı giriniz"))
+        if işlem == 1:
+            print(f"{sayı1} + {sayı2} = {sayı1+sayı2}")
+        elif işlem == 2:
+            print(f"{sayı1} - {sayı2} = {sayı1-sayı2}")
+        elif işlem == 3:
+            print(f"{sayı1} * {sayı2} = {sayı1*sayı2}")
+        elif işlem == 4:
+            print(f"{sayı1} / {sayı2} = {sayı1/sayı2}")
+        elif işlem == 5:
+            for i in range(1,sayı1+1):
+                    sonuc *= i
+            print(f"{sayı1}'in faktöriyeli {sonuc}")
+        elif işlem == 6:
+            print(f"{sayı1}'in {sayı2}.kuvveti:{sayı1**sayı2}")
+        elif işlem == 7:
+            print(f"{sayı1}'in karekökü {sayı1**(1/2)}")
+        elif işlem == 8:
+            break
+        else: 
+            anahtar = 0
+    else:
+        print("program bitti")
+
+1-toplama 
+2-çıkarma
+3-çarpma
+4-bölme
+5-faktöriyel
+6-kuvvet
+7-kök alma
+8-çıkış
+8
+program bitti
+
+1-toplama 
+2-çıkarma
+3-çarpma
+4-bölme
+5-faktöriyel
+6-kuvvet
+7-kök alma
+8-çıkış
+0
+1.sayıyı giriniz0
+2.sayıyı giriniz0
+sayı = "9,674,342"
+sayı = sayı.replace(",","").replace(".","")
+print(sayı)
+9674342
+sözlük = {"(1,3)":"1"}
+sözlük
+{'(1,3)': '1'}
+sözlük = {"(1,3)":"1","a":0}
+sözlük
+{'(1,3)': '1', 'a': 0}
+sözlük = {"(1,2)":"1","a":0,"b":[1,2,3],"c":(1,2,3),"d":{"a":"1"}}
+sözlük
+{'(1,2)': '1', 'a': 0, 'b': [1, 2, 3], 'c': (1, 2, 3), 'd': {'a': '1'}}
+liste = (1,2,3)
+liste[0]
+1
+sözlük = {"(1,2)":"1","a":0,"b":[1,2,3],"c":(1,2,3),"d":{"a":"1"}}
+sözlük ["(1,2)"]
+'1'
+sözlük = {"a":0,"b":[1,2,3],"c":(1,2,3),"d":{"a":"1"}}
+sözlük ["b"]
+[1, 2, 3]
+sözlük["e"] ="yeni eleman"
+sözlük
+{'a': 0, 'b': [1, 2, 3], 'c': (1, 2, 3), 'd': {'a': '1'}, 'e': 'yeni eleman'}
+sözlük["d"]["a"]
+'1'
+sözlük = {"a":1,"b":2,"c":3,"d":4}
+sözlük.update({"e":5})
+sözlük
+{'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
+sözlük = {"a":1,"b":2,"c":3,"d":4}
+sözlük.update([("e",5),("f",6),("g",7)])
+sözlük
+{'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7}
+sözlük2 = sözlük.copy()
+sözlük2
+{'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7}
+sözlük2.clear()
+sözlük2
+{}
+sözlük.items()
+dict_items([('a', 1), ('b', 2), ('c', 3), ('d', 4), ('e', 5), ('f', 6), ('g', 7)])
+sözlük.keys()
+dict_keys(['a', 'b', 'c', 'd', 'e', 'f', 'g'])
+sözlük.values()
+dict_values([1, 2, 3, 4, 5, 6, 7]
+sayı = 1
+type(sayı)
+int
+a = 3
+b = 4
+c = a + b
+c
+7
+sayı2 =1.5
+sayı2
+1.5
+d = a/b
+type(d)
+float
+sayı3 = 1j
+type(sayı3)
+complex
+metin = "ankara"
+metin2 = "1"
+type(metin2)
+str
+metin = "ankara'da"
+metin
+"ankara'da"
+metin = "ankara  "soğuk"
+  File "<ipython-input-10-2240220555f1>", line 1
+    metin = "ankara  "soğuk"
+                      ^
+SyntaxError: invalid syntax
+
+
+'ankara "soğuk"'
+type (metin)
+str
+metin = """ankara'da soğuk bir akşamüstü"""
+type(metin)
+str
+liste = [1,1.4,1J,"ankara",[1,2],(1,3),{1:"bir"}]
+type(liste)
+list
+liste = [[1,2],[3,4]]
+liste = [[1,2],[3,4]]
+demet = (1)
+type(demet)
+int
+demet = (1,)
+type(demet)
+tuple
+sozluk = {"book":"kitap","pencil":"kalem"}
+type(sozluk)
+dict
+var1 = 1
+var2 = 1.5
+var3 = 1.4j
+var4 = "vektörel"
+var5 = (1,2,3,4.5)
+var6 = [1,2,3,4]
+var7 = {1:"bir"}
+print("var1 değişkenin tipi:",type(var1))
+print("var2 değişkenin tipi:",type(var2))
+print("var3 değişkenin tipi:",type(var3))
+print("var4 değişkenin tipi:",type(var4))
+print("var5 değişkenin tipi:",type(var5))
+print("var6 değişkenin tipi:",type(var6))
+print("var7 değişkenin tipi:",type(var7))
+var1 değişkenin tipi: <class 'int'>
+var2 değişkenin tipi: <class 'float'>
+var3 değişkenin tipi: <class 'complex'>
+var4 değişkenin tipi: <class 'str'>
+var5 değişkenin tipi: <class 'tuple'>
+var6 değişkenin tipi: <class 'list'>
+var7 değişkenin tipi: <class 'dict'>
+sayı = 1
+type(sayı)
+int
+a = 3
+b = 4
+c = a + b
+c
+7
+sayı2 =1.5
+sayı2
+1.5
+d = a/b
+type(d)
+float
+sayı3 = 1j
+type(sayı3)
+complex
+metin = "ankara"
+metin2 = "1"
+type(metin2)
+str
+metin = "ankara'da"
+metin
+"ankara'da"
+metin = "ankara  "soğuk"
+  File "<ipython-input-10-2240220555f1>", line 1
+    metin = "ankara  "soğuk"
+                      ^
+SyntaxError: invalid syntax
+
+
+'ankara "soğuk"'
+type (metin)
+str
+metin = """ankara'da soğuk bir akşamüstü"""
+type(metin)
+str
+liste = [1,1.4,1J,"ankara",[1,2],(1,3),{1:"bir"}]
+type(liste)
+list
+liste = [[1,2],[3,4]]
+liste = [[1,2],[3,4]]
+demet = (1)
+type(demet)
+int
+demet = (1,)
+type(demet)
+tuple
+sozluk = {"book":"kitap","pencil":"kalem"}
+type(sozluk)
+dict
+var1 = 1
+var2 = 1.5
+var3 = 1.4j
+var4 = "vektörel"
+var5 = (1,2,3,4.5)
+var6 = [1,2,3,4]
+var7 = {1:"bir"}
+print("var1 değişkenin tipi:",type(var1))
+print("var2 değişkenin tipi:",type(var2))
+print("var3 değişkenin tipi:",type(var3))
+print("var4 değişkenin tipi:",type(var4))
+print("var5 değişkenin tipi:",type(var5))
+print("var6 değişkenin tipi:",type(var6))
+print("var7 değişkenin tipi:",type(var7))
+var1 değişkenin tipi: <class 'int'>
+var2 değişkenin tipi: <class 'float'>
+var3 değişkenin tipi: <class 'complex'>
+var4 değişkenin tipi: <class 'str'>
+var5 değişkenin tipi: <class 'tuple'>
+var6 değişkenin tipi: <class 'list'>
+var7 değişkenin tipi: <class 'dict'>
+for i in range(1,6):
+    print(i)
+    if i == 3 :
+        break
+while True:
+    işlem = input("işlem numaranızı giriniz")
+    if işlem == "5" :
+        break
+    else :
+        print(işlem)
+    print("devam ediyor")
+1
+2
+3
+işlem numaranızı giriniz3
+3
+devam ediyor
+işlem numaranızı giriniz5
+​
+for i in range(1,6):
+    print(i)
+    if i == 3 :
+        continue
+1
+2
+3
+4
+5
+for i in range(1,6):
+    print(i)
+    if i == 3 :
+        continue
+while True:
+    işlem = input("işlem numaranızı giriniz")
+    if işlem == "5" :
+        continue
+    elif işlem == "6":
+        break
+    else :
+        print(işlem)
+    print("devam ediyor")
+1
+2
+3
+4
+5
+işlem numaranızı giriniz6
+sayı = 0
+while sayı < 6 :
+    sayı += 1
+    print(sayı)
+else:
+    print("işlem bitti")
+print("devam ediyor program")
+for i in range(0,6):
+    print(i)
+else :
+    print("işlem bitti")
+1
+2
+3
+4
+5
+6
+işlem bitti
+devam ediyor program
+0
+1
+2
+3
+4
+5
+işlem bitti
+r1 = 4
+var1 = float(var1)
+print (var1)
+4.0
+var1 = int("5")
+var1 = int(input("sayıyı giriniz:"))
+print(type(var1))
+sayıyı giriniz:95328
+<class 'int'>
+var1 = "5.8"
+var1 = 4
+var1 = (float(var1))
+print(type(var1))
+print(var1)
+<class 'float'>
+4.0
+var1 = complex(2)
+print(type(var1))
+print(var1)
+<class 'complex'>
+(2+0j)
+var1 = complex(2.5)
+print(type(var1))
+print(var1)
+<class 'complex'>
+(2.5+0j)
+var1 = 5
+print(type(var1))
+<class 'int'>
+var1 = str(5) + "a"
+print(type(var1))
+print (var1)
+<class 'str'>
+5a
+repr (4)
+'4'
+print(repr([1,2,3,4]))
+[1, 2, 3, 4]
+eval("5+2")
+7
+print(eval(input("işlemi yazınız:")))
+işlemi yazınız:5*2+3-4
+9
+liste = [1,2,3,4]
+set(liste)
+{1, 2, 3, 4}
+metin = ("python")
+demet = tuple(metin)
+print(type(demet))
+print(demet)
+<class 'tuple'>
+('p', 'y', 't', 'h', 'o', 'n')
+metin = ("python")
+demet = list(liste)
+print(type(liste))
+print(liste)
+<class 'list'>
+[1, 2, 3, 4]
+a = 2
+b = 3
+print(a<b)
+print(type(a<b))
+True
+<class 'bool'>
+1>3
+False
+1<=3
+True
+1 ==2
+False
+1 != 2
+True
+a =1
+b= "1"
+a is b
+False
+a = 1
+b = 1
+a is b
+True
+a = 1
+b = 1
+a is not b
+False
+liste = [1,2,3,4]
+5 in liste
+False
+liste = [1,2,3,4]
+4 in liste
+​
+True
+liste = [1,2,3,4]
+4 not in liste
+​
+False
+liste = [1,2,3,4]
+5 not in liste
+True
+liste = [1,2,3,4]
+(4 not in liste) and (5 in liste)
+False
+liste = [1,2,3,4]
+(4 in liste) and (5 in liste)
+False
+liste = [1,2,3,4]
+(4 in liste) and (5 not in liste)
+True
+liste = [1,2,3,4]
+(4 in liste) or (5 in liste)
+True
+liste = [1,2,3,4,5,6]
+print(liste)
+[1, 2, 3, 4, 5, 6]
+liste = [1,2,3,4,5,6]
+print(*liste,sep="\n")
+1
+2
+3
+4
+5
+6
+liste = [1,2,3,4,5,6]
+print(*liste)
+1 2 3 4 5 6
+def fonk (sayılar):
+    sonuc = 0
+    for item in liste:
+        sonuc += item
+    return sonuc
+print(fonk([1,2,3,4,5,6]))
+21
+def fonk(*args):
+    sonuc = 0
+    for item in args:
+        sonuc += item
+    return sonuc
+print(fonk(1,2,3,4,5,6))
+21
+def fonk(*args):
+    liste = []
+    for item in args:
+        if item %2 == 0:
+            liste.append(item)
+    return liste
+sonuc = fonk(1,3,4,5,69,9,22)
+print(*sonuc)
+4 22
+def fonk(*args):
+    print(type(args))
+sonuc = fonk(1,3,4,5,69,9,22)
+<class 'tuple'>
+liste = {"isim","soyisim","il"}
+sözlük = dict.fromkeys(liste,"")
+def fonk(*args):
+    for i in range(0,len(args)):
+        if i == 0:
+            sözlük["isim"] = args[i]
+        elif i == 1:
+            sözlük["soyisim "]= args[i]
+        elif i == 2:
+            sözlük["il"]=args[i]
+fonk("ali","veli","izmir")
+print(sözlük)
+{'il': 'izmir', 'isim': 'ali', 'soyisim': '', 'soyisim ': 'veli'}
