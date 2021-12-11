@@ -1,0 +1,42 @@
+metin = "python eğitimi"
+print(len(metin))
+liste = ["1",1,2,3]
+print(len(liste))
+def fonk(a,b,c=0):
+    return a+b+c
+print(fonk(1,2))
+print(fonk(1,2,3))
+class ülke1():
+    def yer(self):
+        print("ülke asya kıtasındadır")
+    def nüfus(self):
+        print("ülke 200 milyon")
+    def type(self):
+        print("federal cumhuriyet")
+class ülke2():
+    def yer(self):
+        print("ülke avrupa kıtasındadır")
+    def nüfus(self):
+        print("ülke 100 milyon")
+    def type(self):
+        print("cumhuriyet")
+def fonk(nesne):
+    item.yer()
+    item.nüfus()
+    item.type()
+    liste = [ülke1(),ülke2()]
+for item in [ülke1(),ülke2()]:
+    fonk(item)
+class A ():
+    def fonk(self):
+        print("A üzerinden çalıştı")
+class B (A):
+    def fonk(self):
+        print("B üzerinden çalıştı")
+        super(A,self).fonk1()
+class C (B):
+    def fonk(self):
+        print("B üzerinden çalıştı")
+        super(B, self).fonk()
+for item in (A,B,C):
+    item().fonk1()
