@@ -1,0 +1,48 @@
+#import os
+#print(os.getcwd())
+#print(os.sep)
+#import sys
+#sys.path.append("C:\paket")
+#print(*sys.path,sep="\n")
+#print(sys.getwindowsversion())
+#print(sys.version_info.major,sys.version_info.minor,sys.version_info.micro)
+#if sys.version_info.major == 3 and sys.version_info.minor > 3:
+#    print("iş görür")
+#print(sys.platform)
+#print(sys.getdefaultencoding())
+#print(sys.getrecursionlimit())
+#print(sys.setrecursionlimit())
+import platform as pf
+import webbrowser
+
+#print(pf.platform())
+#print(pf.platform(0,1))
+#print(pf.platform(1))
+#print(pf.machine())
+#print(pf.processor())
+#print(pf.architecture())
+#print(pf.system())
+#print(pf.version())
+#import webbrowser as web
+#web.open("www.python.org")
+#webbrowser.open_new()
+print(dir(webbrowser))
+#import sys
+#print(sys.builtin_module_names,sep="/n")
+#import pkgutil
+#print(*pkgutil.iter_modules(),sep="/n")
+#import os
+#import random as rnd
+#rnd.seed(2)
+#for i in range (5):
+#    print(rnd.random())
+#for i in range(10):
+#print(i,rnd.randint(1,10))
+#for i in range(10):
+    #print(i,rnd.randrange(1,10,2))
+# liste = [rnd.randrange(10) for i in range(5)]
+#liste = [1,2,3,4,5,6,7,8,9,0,11]
+#print(rnd.choice(liste))
+#liste = ["AHMET","MEHMET","VELİ"]
+#print(rnd.sample(liste,3))
+#print(rnd.choices(liste,k=3))
