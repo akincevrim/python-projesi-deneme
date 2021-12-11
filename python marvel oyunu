@@ -1,0 +1,70 @@
+class marvelhero:
+    def __init__(self,sağlık,güç,isim):
+        self.sağlık = sağlık
+        self.güç = güç
+        self.isim = isim
+    def vuruş(self):
+        return self.güç
+
+    def darbe(self,güç):
+        self.sağlık -= güç
+        return self.sağlık
+class deadpool(marvelhero):
+    def __init__(self):
+        super().__init__(500,50,"deadpool")
+        self.super = 0
+
+    def darbe(self, güç):
+        self.super += 1
+        if self.super == 3:
+            self.sağlık+=100
+        else:
+            self.sağlık -= güç
+        return self.sağlık
+class hulk(marvelhero):
+    def __init__(self):
+        super().__init__(750,100,"hulk")
+        self.super = 0
+    def vuruş(self):
+        self.super += 1
+        if self.super == 5:
+            self.super=0
+            return (self.güç * 2)
+        else:
+            return(self.güç)
+class ironman(marvelhero):
+    def __init__(self):
+        super().__init__(750,50,"iron man")
+        self.super = 0
+class kaptanamerika(marvelhero):
+    def __init__(self):
+        super().__init__(500,75,"kaptan amerika")
+        self.super = 0
+#p1 = deadpool()
+#p2 = hulk()
+#print(f"{p2.isim}vuruş:{p2.vuruş()}")
+#print(f"{p1.isim}sağlık:{p1.darbe(p2.vuruş())}")
+import random as rnd
+import time
+liste = [hulk,deadpool,kaptanamerika,ironman]
+p1 = rnd.choice(liste)()
+p2 = rnd.choice(liste)()
+print(p2.darbe(p1.vuruş()))
+#print(p2.isim)
+#print(p1.isim)
+#print(f"p1 için {p1.isim} seçildi")
+#print(f"p2 için {p2.isim} seçildi")
+print(f"p1 için {p1.isim} seçildi",f"p2 için {p2.isim} seçildi")
+while p1.sağlık > 0 and p2.sağlık > 0:
+    time.sleep(2)
+    p2.darbe(p1.vuruş())
+    print(f"{p1.isim} ==> {p2.isim} vurdu ==>{p1.isim}:{p1.sağlık} ve {p2.isim}:{p2.sağlık}")
+    time.sleep(2)
+    p1.darbe(p2.vuruş())
+    print(f"{p2.isim} ==> {p1.isim} vurdu ==>{p2.isim}:{p2.sağlık} ve {p1.isim}:{p1.sağlık}")
+else:
+    if p1.sağlık > p2.sağlık:
+        print(p1.isim,"kazandı")
+    else:
+        print(p2.isim, "kazandı")
+    print("oyun bitti")
