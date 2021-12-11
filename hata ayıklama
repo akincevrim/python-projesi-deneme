@@ -1,0 +1,24 @@
+#sayı1 = int(input("1.sayıyı giriniz: "))
+#sayı2 = int(input("2.sayıyı giriniz: "))
+#try:
+#    sonuc = sayı1/sayı2
+#    print(sonuc)
+#except:
+#    print("hata var")
+#print("devam ediyor")
+def bölme():
+    try:
+        adım = "1A"
+        sayı1 = int(input("1.sayıyı giriniz: "))
+        adım = "2A"
+        sayı2 = int(input("2.sayıyı giriniz: "))
+        adım = "3A"
+        sonuc = sayı1/sayı2
+        adım = "3A"
+        return sonuc
+    except Exception as hata:
+        return "hata var hata mesajı " +str(hata)+ " adım :"+adım
+    finally:
+        print("blok bitti")
+print(bölme())
+print("devam ediyor")
